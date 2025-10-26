@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>LAB C — Puzzle z mapy (Leaflet + OSM)</title>
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""
+    />
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header>
+    <h1>LAB C — Puzzle z mapy</h1>
+    <div class="controls">
+        <button id="btnLocate">Moja lokalizacja</button>
+        <button id="btnExport">Pobierz mapę</button>
+        <span id="coords"></span>
+    </div>
+</header>
+
+<main>
+    <section class="map-panel">
+        <div id="map"></div>
+        <div id="rasterPreviewWrap">
+            <h2>Raster z mapy</h2>
+            <canvas id="mapRaster" width="0" height="0"></canvas>
+            <a id="downloadPng" href="#" download="map_raster.png" hidden>Pobierz PNG</a>
+        </div>
+    </section>
+
+    <section class="puzzle-panel">
+        <div class="puzzle-areas">
+            <div class="area">
+                <h2>Rozsypane puzzle</h2>
+                <div id="bench" class="bench" aria-label="Stół na puzzle"></div>
+            </div>
+            <div class="area">
+                <h2>Plansza 4×4</h2>
+                <div id="board" class="board" aria-label="Plansza układanki"></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""
+></script>
+<script src="https://unpkg.com/leaflet-image/leaflet-image.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
