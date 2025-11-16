@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LAB D – REST API CLIENT (OpenWeather)</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<header class="container">
+  <h1>LAB</h1>
+</header>
+<main class="container">
+  <section class="search-bar">
+    <label for="cityInput">Miejscowość</label>
+    <input id="cityInput" type="text" placeholder="np. Szczecin" />
+    <button id="weatherBtn" type="button">Pogoda</button>
+    <div id="msg" class="msg" aria-live="polite"></div>
+  </section>
+  <section class="results">
+    <div class="panel">
+      <h2>Bieżąca pogoda</h2>
+      <div id="currentWeather" class="current"></div>
+    </div>
+    <div class="panel">
+      <h2>Prognoza 5 dni</h2>
+      <div id="forecastSummary" class="summary"></div>
+      <div id="forecastTable" class="table-wrapper"></div>
+    </div>
+  </section>
+</main>
+<footer class="container footer">
+  <p>Źródło danych: <a href="https://openweathermap.org/" target="_blank" rel="noreferrer">OpenWeather</a></p>
+</footer>
+<script src="./app.js"></script>
+</body>
+</html>

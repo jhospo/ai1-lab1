@@ -1,0 +1,44 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #111; background: #fff; }
+a { color: #0a66c2; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container { max-width: 860px; margin: 0 auto; padding: 16px; }
+header { padding: 16px 0; border-bottom: 1px solid #eee; }
+h1 { font-size: 22px; }
+.subtitle { margin-top: 6px; color: #666; font-size: 14px; }
+.footer { margin-top: 24px; padding: 16px 0; color: #666; border-top: 1px solid #eee; font-size: 14px; }
+
+.search-bar { display: grid; grid-template-columns: 120px 1fr auto; gap: 8px; align-items: center; margin-top: 12px; }
+.search-bar input { padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px; }
+.search-bar button { padding: 9px 12px; border: 1px solid #111; background: #111; color: #fff; border-radius: 4px; cursor: pointer; }
+.search-bar button:disabled { opacity: .6; cursor: not-allowed; }
+.hint { grid-column: 2 / 4; color: #666; font-size: 12px; }
+.msg { grid-column: 1 / -1; min-height: 18px; font-size: 14px; }
+.msg.ok { color: #0a7f3f; }
+.msg.err { color: #c22727; }
+
+.results { display: grid; gap: 12px; margin-top: 16px; }
+.panel { border: 1px solid #eee; border-radius: 6px; padding: 12px; }
+.panel h2 { font-size: 18px; margin-bottom: 8px; }
+
+.current { display: grid; grid-template-columns: 72px 1fr; gap: 12px; align-items: center; min-height: 72px; }
+.current .icon { width: 72px; height: 72px; }
+.current .meta { display: flex; gap: 12px; flex-wrap: wrap; font-size: 14px; }
+.kv { display: flex; gap: 6px; }
+.kv .k { color: #666; }
+.kv .v { font-weight: 600; }
+.desc { margin-top: 6px; color: #444; }
+
+.summary { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+.card { border: 1px solid #eee; border-radius: 6px; padding: 8px; }
+.card .when { color: #666; font-size: 12px; margin-bottom: 4px; }
+.card .t { font-size: 16px; font-weight: 700; }
+.card .desc { color: #444; font-size: 13px; }
+
+.table-wrapper { overflow: auto; border: 1px solid #eee; border-radius: 6px; }
+.table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table thead th { text-align: left; padding: 8px; border-bottom: 1px solid #eee; background: #f8f8f8; }
+.table tbody td { padding: 8px; border-top: 1px solid #f0f0f0; white-space: nowrap; }
+
+.badge { display: inline-block; padding: 2px 6px; border: 1px solid #ddd; border-radius: 999px; color: #555; font-size: 12px; }
